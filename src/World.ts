@@ -83,4 +83,19 @@ export class World {
         }
         return value;
     }
+    public getRobotStates(): RobotState[] {
+        return this.robotStates;
+    }
+
+    public getOutput(): string [] {
+        const states: string[] = []
+        for (const robotState of this.robotStates) {
+            let value = `(${robotState.lastX},${robotState.lastY},${robotState.lastOrientation})`;
+            if (robotState.isLost) {
+                value += ' LOST';
+            }
+            states.push(value);
+        }
+        return states;
+    }
 }

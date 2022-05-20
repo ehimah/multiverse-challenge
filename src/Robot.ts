@@ -14,8 +14,8 @@ export class Robot {
         this.directionMap = new Map<string, [string, string]>([
             ['N', ['W', 'E']],
             ['E', ['N', 'S']],
-            ['W', ['N', 'S']],
-            ['S', ['W', 'E']],
+            ['W', ['S', 'R']],
+            ['S', ['E', 'W']],
         ]);
     }
 
